@@ -1,14 +1,42 @@
 import React, { useState } from 'react'
 import styles from './Register.module.css'
 import { Link } from 'react-router-dom';
+import registerUser from '../../../../services/hooks/registerUser';
+
 
 function Register() {
 
-    const [step, setStep] = useState(1);
+    const [step, setStep] = useState(2);
+
+    const [username, setUsername] = useState("");
+    const [lastname, setLastname] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [dateBirth, setDateBirth] = useState("");
+    const [motherTongue, setMotherTongue] = useState("");
+
+    function register() {
+
+        const dateTime = new Date();
+
+        const user = {
+            name: username,
+            lastname: lastname,
+            email: email,
+            passwordHash: password,
+            dateBirth: dateBirth,
+            createdAt: dateTime,
+            language: motherTongue
+        }
+
+        registerUser(user);
+
+    }
 
     return (
         <>
             <div className={styles.registerSec}>
+
 
                 {step === 1 && (
 
@@ -38,34 +66,65 @@ function Register() {
 
                         <form action="" className={styles.form}>
                             <label htmlFor="">Name
-                                <input type="text" placeholder='Katerin Rosetti' />
-                            </label>
+                                <input value={username}
+                                    type="text"
+                                    onChange={(e) => setUsername(e.target.value)}
+                                    placeholder='Katerin Rosetti' />
+                            </label> <br />
+
                             <label htmlFor="">Lastname
-                                <input type="text" placeholder='Katerin Rosetti' />
-                            </label>
-                            <label htmlFor="">Username
-                                <input type="text" placeholder='Katerin Rosetti' />
-                            </label>
+                                <input value={lastname}
+                                    type="text"
+                                    onChange={(e) => setLastname(e.target.value)}
+                                    placeholder='Katerin Rosetti' />
+                            </label> <br />
+
+                            <label htmlFor="">Email
+                                <input value={email}
+                                    type="text"
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    placeholder='Katerin Rosetti' />
+                            </label> <br />
+
                             <label htmlFor="">Password
-                                <input type="text" placeholder='Katerin Rosetti' />
-                            </label>
+                                <input value={password}
+                                    type="text"
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    placeholder='Katerin Rosetti' />
+                            </label> <br />
+
                             <label htmlFor="">Date of Birth
-                                <input type="text" placeholder='Katerin Rosetti' />
-                            </label>
+                                <input value={dateBirth}
+                                    type="date"
+                                    onChange={(e) => setDateBirth(e.target.value)}
+                                    placeholder='Katerin Rosetti' />
+                            </label> <br />
+
+                            {/* 
                             <label htmlFor="">Profile Picture
                                 <input type="text" placeholder='Katerin Rosetti' />
-                            </label>
+                            </label> <br />
+                                */}
 
                             <label htmlFor="">Mother Tongue
-                                <input type="text" placeholder='Katerin Rosetti' />
+                                <input value={motherTongue}
+                                    type="text"
+                                    onChange={(e) => setMotherTongue(e.target.value)}
+                                    placeholder='Katerin Rosetti' />
                             </label>
-                            
+
 
                         </form>
 
-                        <button onClick={() => setStep(3)}>Avanzar</button>
+                        <button onClick={function () {
+                            {/* setStep(2) */}
+                            register();
+                        }}
+                        >Avanzar</button>
                     </div>
                 )}
+
+
 
                 {step === 3 && (
                     <div>
@@ -78,6 +137,8 @@ function Register() {
                     </div>
 
                 )}
+
+
             </div>
         </>
     )

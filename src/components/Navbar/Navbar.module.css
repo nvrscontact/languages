@@ -23,7 +23,7 @@
 }
 
 .pictureProfile {
-    border-right: 1px solid var(--white-3);
+    border-right: 3px solid var(--white-3);
     padding: 2px;
     display: flex;
     align-items: center;
@@ -58,7 +58,7 @@
     align-items: center;
     justify-content: end;
     font-size: var(--text-sm);
-    border-left: 1px solid var(--white-3);
+    border-left: 3px solid var(--white-3);
     width: 60px;
 
 
@@ -90,7 +90,7 @@
 .navigationMenu {
     display: flex;
     align-items: center;
-    border-left: 1px solid var(--white-3);
+    border-left: 3px solid var(--white-2);
     padding: 0 6px;
     justify-self: end;
 
@@ -162,7 +162,6 @@
 
 summary img {
     width: 10px;
-
 }
 
 

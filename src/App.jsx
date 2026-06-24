@@ -18,6 +18,7 @@ import ScienceBased from './pages/public/info/ScienceBased/ScienceBased';
 import RealLifeSituations from './pages/private/metrics/RealLifeSituations/RealLifeSituations';
 import GrammarLearned from './pages/private/metrics/GrammarLearned/GrammarLearned';
 import CEFRAlignment from './pages/private/metrics/CEFRAlignment/CEFRAlignment';
+import Login from './pages/public/auth/Login/Login';
 
 
 function App() {
@@ -27,14 +28,16 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<NoNavbarLayout />}>
+            <Route path="/" element={<Home />} /> {/* public */}
 
             <Route path="/user-profile" element={<UserProfile />} /> {/* private */}
             <Route path="/social-chat" element={<SocialChat />} /> {/* private */}
+            <Route path="/register" element={<Register />} /> {/* public */}
+            <Route path="/login" element={<Login />} /> {/* public */}
           </Route>
 
           <Route element={<MainLayout />}>
-            <Route path="/" element={<Home />} /> {/* public */}
-            <Route path="/register" element={<Register />} /> {/* public */}
+
 
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/cefr-aligned" element={<CEFRAlignment />} />
