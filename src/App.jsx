@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './styles/layout/layout.css';
 
 import Dashboard from "./pages/private/dashboard/Dashboard";
-import CFER_Aligned from "./pages/private/metrics/CFERAligned/CFERAligned";
 import Methodology from "./pages/public/info/Methodology/Methodology";
 
 import UserProfile from "./pages/private/UserProfile/UserProfile";
@@ -18,6 +17,7 @@ import Config from './pages/private/Config/Config';
 import ScienceBased from './pages/public/info/ScienceBased/ScienceBased';
 import RealLifeSituations from './pages/private/metrics/RealLifeSituations/RealLifeSituations';
 import GrammarLearned from './pages/private/metrics/GrammarLearned/GrammarLearned';
+import CEFRAlignment from './pages/private/metrics/CEFRAlignment/CEFRAlignment';
 
 
 function App() {
@@ -37,7 +37,7 @@ function App() {
             <Route path="/register" element={<Register />} /> {/* public */}
 
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/cfer-aligned" element={<CFER_Aligned />} />
+            <Route path="/cefr-aligned" element={<CEFRAlignment />} />
             <Route path="/real-life-situations" element={<RealLifeSituations />} />
             <Route path="/grammar-learned" element={<GrammarLearned />} />
             <Route path="/words-learned" element={<WordsLearned />} />

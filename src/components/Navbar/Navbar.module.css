@@ -1,69 +1,94 @@
 .navbarSec {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 14px 10px 6px 14px;
-    margin-bottom: 10px;
+    align-items: start;
+    justify-content: center;
+    margin-top: 20px;
     background-color: var(--black-1);
-    border-bottom: 1px solid var(--white-2);
     z-index: 10;
     position: relative;
+    margin-bottom: 30px;
 }
 
-.navbarSec .userInfo {
+.navbarMenu {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--white-2);
+    border-radius: 2px;
+    height: 55px;
+    width: 90vw;
+}
+
+.pictureProfile {
+    border-right: 1px solid var(--white-3);
+    padding: 2px;
     display: flex;
     align-items: center;
-    gap: 10px;
-
-    h3 {
-        font-size: var(--text-md);
-        line-height: 0.7;
-        margin-bottom: 4px;
+    
+    img {   
+        width: 40px;
+        height:100%;
+        object-fit: cover;
     }
+}
 
-    p {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        gap: 1px;
 
-        span:nth-of-type(2) {
-            color: var(--white-3);
-        }
-    }
+.userInfo {
+    padding: 10px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
 
     span {
+        color: var(--white-5);
         font-size: var(--text-sm);
-
-        img {
-            width: 14px;
-        }
     }
 }
 
-.navbarSec div {
-    color: var(--white-h);
+.languageOptions {
+    display: flex;
+    align-items: center;
+    font-size: var(--text-sm);
+    padding: 8px;
+    border-left: 1px solid var(--white-3);
 
-    p {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        color: rgb(175, 175, 175);
+
+    span {
+        font-weight: 800;
+        font-size: var(--text-md);
+        color: var(--white-4);
     }
 
+    img {
+        width: 40px;
+        height: 25px;
+        opacity: 0.8;
+        border-radius: 2px;
+        border: 1px solid var(--white-4);
+    }
 }
 
-.navbarSec .pictureProfile {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    border-radius: 2px;
+
+
+
+.navigationMenu {
+    display: flex;
+    align-items: center;
+    border-left: 1px solid var(--white-3);
+    padding: 0 6px;
+    justify-self: end;
+
+    img {
+        width: 30px;
+        height: 35px;
+        opacity: 0.7;
+    }
 }
 
-.navbarSec .menuIcon {
-    width: 30px;
-    height: 45px;
+.navbarMenu div {
+    display: flex;
 }
+
+
 
 .navbarSec .countryIcon {
     width: 16px;
@@ -112,11 +137,28 @@
     summary {
         list-style: none;
         color: var(--white-5);
-        display:flex;
+        display: flex;
         justify-content: end;
-        gap:15px;
-        img{
-            width:10px;
-        }
+        gap: 15px;
+    }
+}
+
+summary img {
+    width: 10px;
+
+}
+
+
+
+.app_language li a {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    gap: 10px;
+
+    img {
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
     }
 }

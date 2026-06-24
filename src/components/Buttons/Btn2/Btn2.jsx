@@ -7,9 +7,6 @@ function Btn2({ text1, img }) {
     <>
       <button className={`${styles.btn} ${styles.animated_border_white}`}>
         <div>
-          <section>
-            
-          </section>
           <p>
             {text1}
           </p>

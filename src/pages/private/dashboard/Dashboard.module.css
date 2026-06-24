@@ -1,5 +1,5 @@
 .hero {
-    margin: 30px 10px 80px 30px;
+    margin: 0 30px 120px 30px;
     position:relative;
 }
 
@@ -7,6 +7,7 @@
     color: var(--white-4);
     font-size: var(--text-2xl);
     font-weight: 700;
+    position:relative;
 
     span {
         color: var(--white-8);
@@ -29,22 +30,38 @@
     }
 }
 
+.greeting::before{
+    content: "";
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:-30px;
+    height:1px;
+    background: #333;
+}
+
+.greeting::after{
+    content:"";
+    position:absolute;
+    right:0;
+    bottom:-60px;
+    width:1px;
+    height:130px;
+    background:#333;
+}
+
 .training{
     display:flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 200px;
+    margin-bottom: 150px;
     
     button{
         margin-top: 30px;
     }
+
+    .header-basic span{
+        font-size:var(--text-sm);
+    }
 }
 
-.hero_square{
-    position:absolute;
-    right:20px;
-    bottom:-40px;
-    opacity:0.8;
-    width:200px;
-
-}

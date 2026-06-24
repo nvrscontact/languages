@@ -15,6 +15,7 @@ import profile_two from '../../../assets/imgs/profile_two.webp';
 import hero_square from '../../../assets/icons/hero_square.svg';
 import dark_map from '../../../assets/imgs/dark_map.png';
 
+import flower_hero from '../../../assets/imgs/flower_hero.png';
 
 import cards from './Card.module.css';
 import dashboard from './Dashboard.module.css';
@@ -43,7 +44,6 @@ function Dashboard() {
 
 
       <section className={dashboard.hero}>
-        <img className={dashboard.hero_square} src={hero_square} alt="" />
         <div className={dashboard.greeting}>
           {dayMessage}, <br />
           <p>
@@ -56,7 +56,7 @@ function Dashboard() {
 
       <section className={dashboard.training}>
 
-        <div className={` header-basic`}>
+        <div className={`header-basic`}>
           <h2>Let's get started</h2>
           <span>Remember, you're getting <br /> closer every day</span>
         </div>
@@ -66,7 +66,7 @@ function Dashboard() {
 
       <section className={cards.languages}>
 
-        <div className={`header-basic`}>
+        <div className={`${cards.header} header-basic`}>
           <h2>Available Languages</h2>
           <span>for learn on your language</span>
         </div>
@@ -91,7 +91,7 @@ function Dashboard() {
                 <img className={cards.infoIcon} src={louvre} alt="" />
               </header>
 
-              <main>  
+              <main>
                 <img className={cards.dark_map} src={dark_map} alt="" />
 
                 <section className={cards.sec_one}>

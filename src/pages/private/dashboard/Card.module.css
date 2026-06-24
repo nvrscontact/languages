@@ -4,6 +4,7 @@
     height: 600px;
     overflow-x: auto;
     gap: 25px;
+    margin-top: 15px;
 
     .countryFlag {
         width: 30px;
@@ -26,7 +27,7 @@
 
     /* direct child selector because if we have another sections inside of this section also will be applied*/
     >section:first-child {
-        padding-left: 20px;
+        padding-left: 30px;
     }
 
     >section:last-child {
@@ -38,7 +39,7 @@
 .languageCard {
     display: flex;
     flex-direction: column;
-    min-width: 320px;
+    min-width: 300px;
     height: 450px;
     border-radius: 10px;
     position: relative;
@@ -227,10 +228,9 @@
 }
 
 .sec_three{
-    background-color: var(--white-1);
+    background-color: var(--black-7);
     padding:20px;
     margin:0 5px;
-
 }
 
 footer {
@@ -246,4 +246,30 @@ footer {
         margin-top: 14px;
         font-weight: 200;
     }
+}
+
+.header{
+    position:relative;
+    margin:0 30px;
+}
+
+
+.header::before{
+    content: "";
+    position: absolute;
+    left:0;
+    right:0;
+    top:-30px;
+    height:1px;
+    background: #333;
+}
+
+.header::after{
+    content:"";
+    position:absolute;
+    left:0;
+    top:-60px;
+    width:1px;
+    height:150px;
+    background:#333;
 }

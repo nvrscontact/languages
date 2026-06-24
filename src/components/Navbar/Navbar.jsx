@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import fr_flag from '../../assets/icons/fr_flag.svg'
 import sp_flag from '../../assets/icons/sp_flag.svg'
+import uk_flag from '../../assets/icons/uk_flag.svg'
+
 import arrow_down from '../../assets/icons/arrow_down.svg'
 
 import navbar_menu from '../../assets/icons/navbar_menu.svg'
@@ -20,50 +22,74 @@ function Navbar() {
     return (
         <header className={styles.navbarSec} >
 
-            <div className={styles.userInfo}>
-                <Link to="/user-profile"><img className={styles.pictureProfile} src={profile_one} alt="" />
-                </Link>
+            <nav className={styles.navbarMenu}>
+
+                <section className={styles.pictureProfile}>
+                    <img src={profile_one} alt="" />
+                </section>
+
+                <section className={styles.userInfo}>
+                    <h4>Alonso Nuñez</h4>
+                    <span>Software Developer</span>
+                </section>
+                
                 <div>
-                    <h3>Alonso Nuñez</h3>
-                    <p>
-                        <span>Software Engineer</span>
-                        <span>Currently B2 in <img src={fr_flag} alt="" /> </span>
-                    </p>
+                    
+                <section className={styles.languageOptions}>
+                    <img src={fr_flag} alt="" />
+                </section>
+
+                <section className={styles.navigationMenu}
+                    onClick={() => setIsOpen(!isOpen)}>
+                    <img src={menu} alt="" />
+                </section>
+
+
                 </div>
-            </div>
 
-            <span
-                onClick={() => setIsOpen(!isOpen)}>
-                <img className={styles.menuIcon} src={menu} alt="" />
-            </span>
 
-            <ul className={`${styles.list} ${isOpen ? styles.open : ""} `} >
-                <li> <Link to="/dashboard">Home</Link></li>
-                <li> <Link to="/training">Training</Link></li>
-                <details>
-                    <summary><img src={arrow_down} alt="" /> Progress</summary>
-                    <div>
-                        <li> <Link to="/real-life-situations">Real-Life Situations</Link></li>
-                        <li> <Link to="/grammar-learned">Grammar Learned</Link></li>
-                        <li> <Link to="/words-learned">Words Learned</Link></li>
-                        <li> <Link to="/cefr-aligned">CFER-Aligned</Link></li>
 
-                    </div>
-                </details>
-                <li> <Link to="/social-chat">Social</Link></li>
-                <br />
+                <ul className={`${styles.list} ${isOpen ? styles.open : ""} `} >
+                    <li> <Link to="/dashboard">Home</Link></li>
+                    <li> <Link to="/training">Training</Link></li>
+                    <details>
+                        <summary><img src={arrow_down} alt="" /> Progress</summary>
+                        <div>
+                            <li> <Link to="/real-life-situations">Real-Life Situations</Link></li>
+                            <li> <Link to="/grammar-learned">Grammar Learned</Link></li>
+                            <li> <Link to="/words-learned">Words Learned</Link></li>
+                            <li> <Link to="/cefr-aligned">CFER-Aligned</Link></li>
 
-                <details>
-                    <summary><img src={arrow_down} alt="" /> More Info</summary>
-                    <div>
-                        <li> <Link to="/methodology">Methodology</Link></li>
-                        <li> <Link to="/science-based">Science-based</Link></li>
+                        </div>
+                    </details>
+                    <li> <Link to="/social-chat">Social</Link></li>
+                    <br />
 
-                    </div>
-                </details>
-                <li> <Link to="/config">Configuration</Link></li>
+                    <details>
+                        <summary><img src={arrow_down} alt="" /> More Info</summary>
+                        <div>
+                            <li> <Link to="/methodology">Methodology</Link></li>
+                            <li> <Link to="/science-based">Science-based</Link></li>
 
-            </ul>
+                        </div>
+                    </details>
+                    <li> <Link to="/config">Configuration</Link></li>
+
+                    <details className={styles.app_language}>
+                        <summary> <img src={arrow_down} alt="" />  App Language</summary>
+                        <div >
+                            <li> <Link to="/real-life-situations"> <img src={sp_flag} alt="" /> Spanish</Link></li>
+                            <li> <Link to="/real-life-situations"> <img src={uk_flag} alt="" /> English</Link></li>
+                            <li> <Link to="/real-life-situations"> <img src={fr_flag} alt="" /> Francais</Link></li>
+
+                        </div>
+                    </details>
+
+                </ul>
+
+            </nav>
+
+
         </header>
     )
 }
