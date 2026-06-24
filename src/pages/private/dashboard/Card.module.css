@@ -38,25 +38,12 @@
 .languageCard {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     min-width: 320px;
     height: 450px;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
     margin-bottom: 20px;
-
-    /*
-    border: 1px solid transparent;
-    background:
-        linear-gradient(#111, #111) padding-box,
-        linear-gradient(45deg, #505050, #505050, #ffffff, #505050, #505050) border-box;
-
-        p {
-            font-weight: 300;
-        }
-
-    */
 
     border: 1px solid var(--white-3);
 
@@ -116,16 +103,32 @@
     gap: 10px;
 }
 
+
 .languageCard main{
+    display:flex;
+    flex-direction: column;
+    position:relative;
 }
 
-.languageCard main .sec_one{
-    border:1px solid red;
+.dark_map{
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:-2;
+    opacity:0.3;
+    object-position:center;
+    object-fit:cover;
+    width:100%;
+    height:100%;
+}
+
+.sec_one{
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 0 15px;
-    margin-bottom: 30px;
+    margin-top:20px;
+    margin-bottom: 50px;
 
     article {
         display: flex;
@@ -142,7 +145,7 @@
     }
 
     article div {
-        background-color: var(--white-1);
+        background-color: var(--white-2);
         border-radius: 6px;
         padding: 12px 12px;
         display: flex;
@@ -162,7 +165,11 @@
     article h5,
     span {
         font-size: var(--text-sm);
-        font-weight: 400;
+        font-weight: 500;
+        color: var(--white-7);
+    }
+
+    article span{
         color: var(--white-5);
     }
 
@@ -171,12 +178,12 @@
     }
 
     article div p {
-        color: var(--white-7);
+        color: var(--white-9);
     }
 
     article img {
-        width: 26px;
-        height: 26px;
+        width: 30px;
+        height: 30px;
         border-radius: 5px;
         object-fit: cover;
 
@@ -189,17 +196,11 @@
 
 }
 
- .sec_two{
-    background-color: var(--white-1);
-    padding:20px;
-    margin:0 5px;
-}
-
-.languageCard aside {
+.sec_two {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 
     h5 {
         margin-bottom: 10px;
@@ -217,27 +218,20 @@
     }
 
     section div span {
-        border-radius: 6px;
+        border-radius: 4px;
         padding: 4px 6px;
         font-weight: 200;
         font-size: var(--text-md);
+        background-color: var(--white-2);
     }
-
-    section div span {
-        border: 1px solid transparent;
-        background:
-            linear-gradient(#111, #111) padding-box,
-            linear-gradient(45deg, #787878, #787878, #787878, #ffffff, #787878, #787878, #787878) border-box;
-        overflow: hidden;
-
-        div {
-            padding: 10px 50px;
-            background-color: var(--white-1);
-        }
-    }
-
 }
 
+.sec_three{
+    background-color: var(--white-1);
+    padding:20px;
+    margin:0 5px;
+
+}
 
 footer {
     display: flex;

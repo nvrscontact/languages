@@ -12,6 +12,8 @@ import uk_bg from '../../../assets/imgs/uk_bg.jpeg';
 
 import profile_one from '../../../assets/imgs/profile_one.jpg';
 import profile_two from '../../../assets/imgs/profile_two.webp';
+import hero_square from '../../../assets/icons/hero_square.svg';
+import dark_map from '../../../assets/imgs/dark_map.png';
 
 
 import cards from './Card.module.css';
@@ -41,6 +43,7 @@ function Dashboard() {
 
 
       <section className={dashboard.hero}>
+        <img className={dashboard.hero_square} src={hero_square} alt="" />
         <div className={dashboard.greeting}>
           {dayMessage}, <br />
           <p>
@@ -53,7 +56,7 @@ function Dashboard() {
 
       <section className={dashboard.training}>
 
-        <div className={`header-basic`}>
+        <div className={` header-basic`}>
           <h2>Let's get started</h2>
           <span>Remember, you're getting <br /> closer every day</span>
         </div>
@@ -64,7 +67,7 @@ function Dashboard() {
       <section className={cards.languages}>
 
         <div className={`header-basic`}>
-          <h2>Languages Availables</h2>
+          <h2>Available Languages</h2>
           <span>for learn on your language</span>
         </div>
 
@@ -88,7 +91,8 @@ function Dashboard() {
                 <img className={cards.infoIcon} src={louvre} alt="" />
               </header>
 
-              <main>
+              <main>  
+                <img className={cards.dark_map} src={dark_map} alt="" />
 
                 <section className={cards.sec_one}>
                   <article>
@@ -109,7 +113,7 @@ function Dashboard() {
                 </section>
 
 
-                <aside>
+                <section className={cards.sec_two}>
                   <h5>Levels Available</h5>
                   <section>
                     <div>
@@ -122,9 +126,9 @@ function Dashboard() {
                       <span>C1 - C2</span>
                     </div>
                   </section>
-                </aside>
+                </section>
 
-                <section className={cards.sec_two}>
+                <section className={cards.sec_three}>
                   <h4>Spoken in +30 countries</h4>
                 </section>
 
@@ -133,7 +137,7 @@ function Dashboard() {
             </div>
 
             <footer>
-              <Btn2 text1={"Empezar"} />
+              <Btn2 text1={"Empezar"} img={fr_flag} />
               <span>Speak with elegance</span>
             </footer>
 

@@ -4,7 +4,6 @@ import './styles/layout/layout.css';
 import Dashboard from "./pages/private/dashboard/Dashboard";
 import CFER_Aligned from "./pages/private/metrics/CFERAligned/CFERAligned";
 import Methodology from "./pages/public/info/Methodology/Methodology";
-import ProgressChart from "./pages/private/metrics/ProgressChart/ProgressChart";
 
 import UserProfile from "./pages/private/UserProfile/UserProfile";
 import Register from "./pages/public/auth/Register/Register";
@@ -16,6 +15,9 @@ import SocialChat from "./pages/private/SocialChat/SocialChat";
 import WordsLearned from "./pages/private/metrics/WordsLearned/WordsLearned";
 import TrainingCards from "./pages/private/TrainingCards/TrainingCards";
 import Config from './pages/private/Config/Config';
+import ScienceBased from './pages/public/info/ScienceBased/ScienceBased';
+import RealLifeSituations from './pages/private/metrics/RealLifeSituations/RealLifeSituations';
+import GrammarLearned from './pages/private/metrics/GrammarLearned/GrammarLearned';
 
 
 function App() {
@@ -25,7 +27,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<NoNavbarLayout />}>
-          
+
             <Route path="/user-profile" element={<UserProfile />} /> {/* private */}
             <Route path="/social-chat" element={<SocialChat />} /> {/* private */}
           </Route>
@@ -33,13 +35,18 @@ function App() {
           <Route element={<MainLayout />}>
             <Route path="/" element={<Home />} /> {/* public */}
             <Route path="/register" element={<Register />} /> {/* public */}
+
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/cfer-aligned" element={<CFER_Aligned />} />
-            <Route path="/methodology" element={<Methodology />} />
-            <Route path="/progress-chart" element={<ProgressChart />} />
+            <Route path="/real-life-situations" element={<RealLifeSituations />} />
+            <Route path="/grammar-learned" element={<GrammarLearned />} />
             <Route path="/words-learned" element={<WordsLearned />} />
             <Route path="/training" element={<TrainingCards />} />
             <Route path="/config" element={<Config />} />
+
+            <Route path="/methodology" element={<Methodology />} />
+            <Route path="/science-based" element={<ScienceBased />} />
+
           </Route>
 
         </Routes>
