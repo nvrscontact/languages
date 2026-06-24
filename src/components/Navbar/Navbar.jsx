@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import fr_flag from '../../assets/icons/fr_flag.svg'
 import sp_flag from '../../assets/icons/sp_flag.svg'
+import arrow_down from '../../assets/icons/arrow_down.svg'
 
 import navbar_menu from '../../assets/icons/navbar_menu.svg'
 import profile_one from '../../assets/imgs/profile_one.jpg'
@@ -35,19 +36,32 @@ function Navbar() {
                 onClick={() => setIsOpen(!isOpen)}>
                 <img className={styles.menuIcon} src={menu} alt="" />
             </span>
-            
-            <div className={styles.listLinks}>
-                <ul classNmae={`${styles.ul} ${isOpen ? styles.open : ""} `} >
-                    <li> <Link to="/alignment-mcer">Alignment MCER</Link></li>
-                    <li> <Link to="/methodology">Methodology</Link></li>
-                    <li> <Link to="/progress-chart">Progress</Link></li>
-                    <li> <Link to="/dashboard">Home</Link></li>
-                    <li> <Link to="/social-chat">Social</Link></li>
-                    <li> <Link to="/training">Training</Link></li>
-                    <li> <Link to="/config">Config</Link></li>
 
-                </ul>
-            </div>
+            <ul className={`${styles.list} ${isOpen ? styles.open : ""} `} >
+                <li> <Link to="/dashboard">Home</Link></li>
+                <li> <Link to="/training">Training</Link></li>
+                <details>
+                    <summary><img src={arrow_down} alt="" /> Progress</summary>
+                    <div>
+                        <li> <Link to="/progress-chart">Global Chart</Link></li>
+                        <li> <Link to="/methodology">Situations</Link></li>
+                        <li> <Link to="/alignment-mcer">MCER Chart</Link></li>
+                    </div>
+                </details>
+                <li> <Link to="/social-chat">Social</Link></li>
+                <br />
+
+                <details>
+                    <summary><img src={arrow_down} alt="" /> More Info</summary>
+                    <div>
+                        <li> <Link to="/alignment-mcer">Alignment MCER</Link></li>
+                        <li> <Link to="/methodology">Methodology</Link></li>
+                        <li> <Link to="/progress-chart">Progress</Link></li>
+                    </div>
+                </details>
+                <li> <Link to="/config">Configuration</Link></li>
+
+            </ul>
         </header>
     )
 }

@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 
 import upload from '../../../assets/icons/upload.svg';
 import img_example from '../../../assets/icons/img_example.svg';
+import improving from '../../../assets/icons/improving.svg';
 import video_test from '../../../assets/video/test.mp4';
 
+import uk_flag from '../../../assets/icons/uk_flag.svg';
 
 import Btn1 from '../../../components/Buttons/Btn1/Btn1';
 
@@ -21,25 +23,41 @@ function TrainingCards() {
 
           <section className={card.infoTopCard}>
             <div>
-              <h4>Writing · Vocabulary · Reading</h4>
-              <span>Less than &lt;2 minutes</span>
+              <b>1.</b>
             </div>
-            <h2>1</h2>
+
+            <div>
+              <h5>Writing · Reading</h5>
+              <span>It takes &lt;2 minutes</span>
+            </div>
+
+            <img src={uk_flag} alt="" />
+
           </section>
 
           <section className={card.card}>
             <div className={card.paragraph}>
               <h3> Hello, how are <span>you</span> feeling tonight? <span>Where</span> is your friend?</h3>
               <div>
-                <p><b>You</b> significa <b>tu</b></p>
-                <p><b>Where</b> significa <b>donde</b></p>
+                <section>
+                  <p><b>You</b> significa <b>tú</b> </p>
+                  <img src={improving} alt="" />
+                </section>
+
+                <section>
+                  <p><b>Where</b> significa <b>donde</b> </p>
+                  <img src={improving} alt="" />
+                </section>
+
               </div>
             </div>
+
 
             <div className={card.question}>
               <p>¿Que palabra uso para referirme a 'donde' ?</p>
               <p>¿Que palabra uso para referirme a 'ti' ?</p>
             </div>
+
 
             <div className={card.answer}>
 
@@ -48,7 +66,7 @@ function TrainingCards() {
                   <img src={img_example} alt="" />
                   <img src={upload} alt="" />
                 </section>
-                <span>Toma con tu telefono una foto presentable al papel donde escribiste las respuestas</span>
+                <span>Sube una foto presentable del papel donde escribiste las respuestas</span>
               </label>
               <input type="file" name="" id="upload" required />
             </div>
@@ -64,8 +82,17 @@ function TrainingCards() {
         <div className={card.sec} >
 
           <section className={card.infoTopCard}>
-            <h4>Writing &nbsp;&nbsp; Vocabulary &nbsp;&nbsp; Reading</h4>
-            <span> it takes less than &lt;2 minutes</span>
+            <div>
+              <b>2.</b>
+            </div>
+
+            <div>
+              <h5>Writing · Reading</h5>
+              <span>It takes &lt;2 minutes</span>
+            </div>
+
+            <img src={uk_flag} alt="" />
+
           </section>
 
           <section className={card.card}>
@@ -80,7 +107,7 @@ function TrainingCards() {
                   <img src={img_example} alt="" />
                   <img src={upload} alt="" />
                 </section>
-                <span>Toma con tu telefono una foto presentable al papel donde escribiste las respuestas</span>
+                <span>Sube una foto presentable del papel donde escribiste las respuestas</span>
               </label>
               <input type="file" name="" id="upload" required />
             </div>
@@ -96,8 +123,17 @@ function TrainingCards() {
         <div className={` ${card.sec} ${card.third_card} `} >
 
           <section className={card.infoTopCard}>
-            <h4>Writing &nbsp;&nbsp; Vocabulary &nbsp;&nbsp; Reading</h4>
-            <span> it takes less than &lt;2 minutes</span>
+            <div>
+              <b>3.</b>
+            </div>
+
+            <div>
+              <h5>Listening · Reading · Writing</h5>
+              <span>It takes &lt; 6 minutes</span>
+            </div>
+
+            <img src={uk_flag} alt="" />
+
           </section>
 
           <section className={card.card}>
@@ -106,6 +142,10 @@ function TrainingCards() {
                 <source src={video_test} type="video/mp4" />
                 Your browser don't support the video
               </video>
+            </div>
+
+            <div className={card.advice}>
+              Puedes volver a reproducir el video
             </div>
 
             <div className={card.question}>
@@ -135,8 +175,17 @@ function TrainingCards() {
         <div className={` ${card.sec} ${card.fourth_card} `} >
 
           <section className={card.infoTopCard}>
-            <h4>Writing &nbsp;&nbsp; Vocabulary &nbsp;&nbsp; Reading</h4>
-            <span> it takes less than &lt;2 minutes</span>
+            <div>
+              <b>4.</b>
+            </div>
+
+            <div>
+              <h5>Writing · Reading</h5>
+              <span>It takes &lt;5 minutes</span>
+            </div>
+
+            <img src={uk_flag} alt="" />
+
           </section>
 
           <section className={card.card}>
@@ -147,8 +196,12 @@ function TrainingCards() {
               </video>
             </div>
 
+            <div className={card.advice}>
+              Puedes volver a reproducir el video
+            </div>
+
             <div className={card.question}>
-              <p>¿Como llamo 'papa' en ingles?</p>
+              <p>¿Como llamo 'papa', 'mama' , y 'hermano' ?</p>
             </div>
 
             <div className={card.answer}>
@@ -175,8 +228,17 @@ function TrainingCards() {
         <div className={` ${card.sec} ${card.fourth_card} `} >
 
           <section className={card.infoTopCard}>
-            <h4>Writing &nbsp;&nbsp; Vocabulary &nbsp;&nbsp; Reading</h4>
-            <span> it takes less than &lt;2 minutes</span>
+            <div>
+              <b>5.</b>
+            </div>
+
+            <div>
+              <h5>Writing · Reading</h5>
+              <span>It takes &lt;2 minutes</span>
+            </div>
+
+            <img src={uk_flag} alt="" />
+
           </section>
 
           <section className={card.card}>
@@ -185,6 +247,10 @@ function TrainingCards() {
                 <source src={video_test} type="video/mp4" />
                 Your browser don't support the video
               </video>
+            </div>
+
+            <div className={card.advice}>
+              Puedes volver a reproducir el video
             </div>
 
             <div className={card.question}>

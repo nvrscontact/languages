@@ -9,6 +9,7 @@ function Dashboard() {
     <div>
       <h1>Good evening Kate</h1>
       <span>We are improving?</span>
+      <span>It's 16:56 night</span>
 
       <div>
         <h1>Languages Availables</h1>

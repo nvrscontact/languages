@@ -6,7 +6,8 @@
     font-size: var(--text-lg);
     border-radius: 8px;
     background-color: black;
-    padding:2px;
+    padding-top:4px;
+    padding-bottom:4px;
     overflow:hidden;
 
     p {
