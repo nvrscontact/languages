@@ -1,8 +1,10 @@
+
+
 .cardCarrousel {
 
     display: flex;
-    align-items: start;
-    height: 500px;
+    align-items: center;
+    height: 600px;
     overflow-x: auto;
     gap: 25px;
 
@@ -26,14 +28,23 @@
         height: 10px;
     }
 
+    /* direct child selector because if we have another sections inside of this section also will be applied*/
+    >section:first-child {
+        padding-left: 20px;
+    }
+
+    >section:last-child {
+        padding-right: 20px;
+    }
+
 }
 
 .cardCarrousel .languageCard {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-width: 300px;
-    height: 360px;
+    min-width: 320px;
+    height: 450px;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -111,39 +122,64 @@
 .cardCarrousel .languageCard main {
     display: flex;
     flex-direction: column;
-    border-radius: 4px;
-    padding: 8px 14px;
-    gap: 20px;
-
-
+    gap: 10px;
+    padding: 0 15px;
 
     article {
         display: flex;
         align-items: start;
-        gap: 8px;
+        gap: 6px;
+        width: fit-content;
+    }
+
+    article:nth-of-type(2) {
+        display: flex;
+        justify-content: end;
+        text-align: end;
+        align-self: end;
     }
 
     article div {
+        background-color: var(--white-1);
+        border: 1px solid var(--white-1);
+        border-radius: 6px;
+        padding: 12px 12px;
         display: flex;
         flex-direction: column;
-        gap: 0;
     }
 
-    article div span {
+    article:nth-of-type(1) div {
+        border-top-left-radius: 0;
+        padding-right: 30px;
+    }
+
+    article:nth-of-type(2) div {
+        border-top-right-radius: 0;
+        padding-left: 30px;
+    }
+
+    article h5,
+    span {
+        font-size: var(--text-sm);
+        font-weight: 400;
         color: var(--white-5);
-        font-size: 14px;
     }
 
+    article h5 {
+        margin-bottom: 4px;
+    }
 
     article div p {
         color: var(--white-7);
     }
 
     article img {
-        width: 22px;
-        height: 22px;
-        border-radius: 25px;
+        width: 26px;
+        height: 26px;
+        border-radius: 5px;
         object-fit: cover;
+        border: 1px solid var(--white-3);
+
     }
 
     p {
@@ -151,28 +187,24 @@
         font-size: var(--text-lg);
     }
 
-    article:nth-of-type(2) {
-        display: flex;
-        justify-content: end;
-        text-align: end;
-    }
-
 }
 
 .cardCarrousel .languageCard aside {
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     margin-bottom: 20px;
 
-    h5{
+    h5 {
         margin-bottom: 10px;
         font-weight: 300;
     }
+
     section {
-        display:flex;
-        gap:15px;
+        display: flex;
+        gap: 15px;
     }
+
     section div {
         display: flex;
         gap: 4px;
@@ -210,8 +242,8 @@ footer {
 
     span {
         font-size: var(--text-sm);
-        color: var(--white-5);
-        margin-top: 10px;
+        color: var(--white-7);
+        margin-top: 14px;
         font-weight: 200;
     }
 }

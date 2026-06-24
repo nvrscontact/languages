@@ -14,10 +14,11 @@ import profile_one from '../../../assets/imgs/profile_one.jpg';
 import profile_two from '../../../assets/imgs/profile_two.webp';
 
 
-import card from './Card.module.css';
+import cards from './Card.module.css';
 import dashboard from './Dashboard.module.css';
 
 import Btn2 from '../../../components/Buttons/Btn2/Btn2';
+import Btn1 from '../../../components/Buttons/Btn1/Btn1';
 
 function Dashboard() {
 
@@ -38,40 +39,121 @@ function Dashboard() {
   return (
     <div>
 
+
       <section className={dashboard.hero}>
-
-      <h2 className={dashboard.greeting}>{dayMessage}, <br /> <span>Kate</span>.</h2>
-      <span>We are improving?</span>
-      <span>It's {hour}:{minutes}</span>
-
+        <div className={dashboard.greeting}>
+          {dayMessage}, <br />
+          <p>
+            <span>Alonso</span>.
+            <span className={dashboard.date}>{hour}:{minutes} - MON</span>
+          </p>
+        </div>
       </section>
 
 
-      <div className={card.languages}>
-        <h2>Languages Availables</h2>
-        <span>for learn on your language</span>
+      <section className={dashboard.training}>
 
-        <div className={card.cardCarrousel}>
+        <div className={`header-basic`}>
+          <h2>Let's get started</h2>
+          <span>Remember, you're getting closer <br /> every day</span>
+        </div>
+
+        <Link to="/training"><Btn1 text1="Start" /></Link>
+      </section>
+
+      <section className={cards.languages}>
+
+        <div className={`header-basic`}>
+          <h2>Languages Availables</h2>
+          <span>for learn on your language</span>
+        </div>
+
+        <div className={cards.cardCarrousel}>
 
           <section>
-
-            <div className={card.languageCard}>
-              <img className={card.countryBackground} src={france_bg} alt="" />
+            <div className={cards.languageCard}>
+              <img className={cards.countryBackground} src={france_bg} alt="" />
 
               <section>
 
                 <header>
                   <section>
-                    <img className={card.countryFlag} src={fr_flag} alt="" />
+                    <img className={cards.countryFlag} src={fr_flag} alt="" />
                     <div>
                       <section>
                         <h3>French</h3>
-                        <span>+30 <img className={card.countryIcon} src={country} alt="" /></span>
+                        <span>+30 <img className={cards.countryIcon} src={country} alt="" /></span>
                       </section>
                       <span>+300 million speakers</span>
                     </div>
                   </section>
-                  <img className={card.infoIcon} src={louvre} alt="" />
+                  <img className={cards.infoIcon} src={louvre} alt="" />
+                </header>
+
+                <main>
+                  <h4>Spoken in +30 countries</h4>
+                  <article>
+                    <img src={profile_two} alt="" />
+                    <div>
+                      <h5>Kate Anderson <span>· 20:19</span> </h5>
+                      <p>Comment vas-tu?</p>
+                    </div>
+                  </article>
+
+                  <article>
+                    <div>
+                      <h5><span>20:30 ·</span> Jax Kuznetsova</h5>
+                      <p>Je va bien, merci.</p>
+                    </div>
+                    <img src={profile_one} alt="" />
+                  </article>
+                </main>
+
+              </section>
+
+              <aside>
+                <h5>Levels Available</h5>
+                <section>
+                  <div>
+                    <span>A1 - A2</span>
+                  </div>
+                  <div>
+                    <span>B1 - B2</span>
+                  </div>
+                  <div>
+                    <span>C1 - C2</span>
+                  </div>
+                </section>
+              </aside>
+
+            </div>
+
+            <footer>
+              <Btn2 text1={"Empezar"} />
+              <span>Speak with elegance</span>
+            </footer>
+
+          </section>
+
+          <section>
+
+            <div className={cards.languageCard}>
+              <img className={cards.countryBackground} src={france_bg} alt="" />
+
+              <section>
+
+                <header>
+                  <section>
+                    <img className={cards.countryFlag} src={fr_flag} alt="" />
+                    <div>
+                      <section>
+                        <h3>French</h3>
+                        <span>+30 <img className={cards.countryIcon} src={country} alt="" /></span>
+                      </section>
+                      <span>+300 million speakers</span>
+                    </div>
+                  </section>
+                  <img className={cards.infoIcon} src={louvre} alt="" />
                 </header>
 
                 <main>
@@ -123,91 +205,23 @@ function Dashboard() {
 
           <section>
 
-            <div className={card.languageCard}>
-              <img className={card.countryBackground} src={france_bg} alt="" />
+            <div className={cards.languageCard}>
+              <img className={cards.countryBackground} src={france_bg} alt="" />
 
               <section>
 
                 <header>
                   <section>
-                    <img className={card.countryFlag} src={fr_flag} alt="" />
+                    <img className={cards.countryFlag} src={fr_flag} alt="" />
                     <div>
                       <section>
                         <h3>French</h3>
-                        <span>+30 <img className={card.countryIcon} src={country} alt="" /></span>
+                        <span>+30 <img className={cards.countryIcon} src={country} alt="" /></span>
                       </section>
                       <span>+300 million speakers</span>
                     </div>
                   </section>
-                  <img className={card.infoIcon} src={louvre} alt="" />
-                </header>
-
-                <main>
-                  <article>
-                    <img src={profile_two} alt="" />
-                    <div>
-                      <span>Kate Anderson</span>
-                      <p>Comment vas-tu?</p>
-                    </div>
-                  </article>
-
-                  <article>
-                    <div>
-                      <span>Jax Kuznetsova</span>
-                      <p>Je va bien, merci.</p>
-                    </div>
-                    <img src={profile_one} alt="" />
-                  </article>
-                </main>
-
-              </section>
-
-              <aside>
-                <h5>Levels Available</h5>
-                <section>
-                  <div>
-                    <span>A1</span>
-                    <span>A2</span>
-                  </div>
-                  <div>
-                    <span>B1</span>
-                    <span>B2</span>
-                  </div>
-                  <div>
-                    <span>C1</span>
-                    <span>C2</span>
-                  </div>
-                </section>
-              </aside>
-
-            </div>
-
-            <footer>
-              <Btn2 text1={"Empezar"} />
-              <span>Speak with elegance</span>
-            </footer>
-
-          </section>
-
-          <section>
-
-            <div className={card.languageCard}>
-              <img className={card.countryBackground} src={france_bg} alt="" />
-
-              <section>
-
-                <header>
-                  <section>
-                    <img className={card.countryFlag} src={fr_flag} alt="" />
-                    <div>
-                      <section>
-                        <h3>French</h3>
-                        <span>+30 <img className={card.countryIcon} src={country} alt="" /></span>
-                      </section>
-                      <span>+300 million speakers</span>
-                    </div>
-                  </section>
-                  <img className={card.infoIcon} src={louvre} alt="" />
+                  <img className={cards.infoIcon} src={louvre} alt="" />
                 </header>
 
                 <main>
@@ -258,12 +272,9 @@ function Dashboard() {
           </section>
 
         </div>
-      </div>
+      </section>
 
-      <div>
-        <h1>Seguir entrenamiento</h1>
-        <Link to="/training">Keep Going</Link>
-      </div>
+
     </div>
   )
 }

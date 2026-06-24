@@ -2,25 +2,31 @@
         border: none;
         border-radius: 10px;
         font-size: var(--text-md);
+        
         border: 1px solid transparent;
         background:
                 linear-gradient(#111, #111) padding-box,
-                linear-gradient(45deg, #787878, #787878, #787878, #ffffff, #787878, #787878, #787878) border-box;
+                linear-gradient(45deg, #ffffff, #787878, #787878, #787878, #787878, #787878, #ffffff) border-box;
         overflow: hidden;
+
+
 
         div {
                 display: flex;
                 justify-content: space-between;
+                /*
                 background-color: var(--white-1);
+                */
         }
 
         p {
+                color:var(--white-7);
                 padding: 12px 40px 12px 50px;
         }
 
         section {
                 display:flex;
-                border-left: 1px solid var(--white-3);
+                border-left: 1px solid var(--white-4);
                 padding:12px;
         }
         

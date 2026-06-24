@@ -47,9 +47,6 @@ body {
     text-wrap:pretty; /* in line jump text looks fine*/
 }
 
-.global-main {
-    padding: 0 20px;
-}
 
 a{
     text-decoration: none;
@@ -75,4 +72,18 @@ a{
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     animation: moveGradient 6s linear infinite;
+}
+
+
+.header-basic {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    span {
+        margin-top: 4px;
+        color: var(--white-5);
+    }
 }
