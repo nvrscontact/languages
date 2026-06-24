@@ -61,22 +61,21 @@ function Navbar() {
                             <li> <Link to="/real-life-situations">Real-Life Situations</Link></li>
                             <li> <Link to="/grammar-learned">Grammar Learned</Link></li>
                             <li> <Link to="/words-learned">Words Learned</Link></li>
-                            <li> <Link to="/cefr-aligned">CFER-Aligned</Link></li>
+                            <li> <Link to="/cefr-aligned">CEFR-Aligned</Link></li>
 
                         </div>
                     </details>
                     <li> <Link to="/social-chat">Social</Link></li>
                     <br />
 
-                    <li> <Link to="/config">Configuration</Link></li>
-
                     <details>
-                        <summary><img src={arrow_down} alt="" />Interesting Info</summary>
+                        <summary><img src={arrow_down} alt="" />Interesting</summary>
                         <div>
                             <li> <Link to="/methodology">Methodology</Link></li>
                             <li> <Link to="/science-based">Science-based</Link></li>
                         </div>
                     </details>
+                    <li> <Link to="/config">Configuration</Link></li>
 
                     <details className={styles.app_language}>
                         <summary> <img src={arrow_down} alt="" />App Language</summary>

@@ -12,6 +12,7 @@
     position:relative;
     width:90vw;
     padding-left: 10px;
+    padding-top: 10px;
     
     span {
         color: var(--white-8);
