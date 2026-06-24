@@ -25,7 +25,9 @@ function Navbar() {
             <nav className={styles.navbarMenu}>
 
                 <section className={styles.pictureProfile}>
+                    <Link to="/user-profile">
                     <img src={profile_one} alt="" />
+                    </Link>
                 </section>
 
                 <section className={styles.userInfo}>
@@ -36,7 +38,8 @@ function Navbar() {
                 <div>
                     
                 <section className={styles.languageOptions}>
-                    <img src={fr_flag} alt="" />
+                    <span>A1</span>
+                    <img src={uk_flag} alt="" />
                 </section>
 
                 <section className={styles.navigationMenu}

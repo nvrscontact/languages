@@ -38,15 +38,17 @@
 }
 
 body {
-    background-color: var(--bg-color-base);
     color: var(--text-color-base);
     letter-spacing: -0.5px;
     font-family: 'Inter';
    /* background-image: url("../../assets/imgs/test.jpg"); */
     background-repeat: repeat;
     text-wrap:pretty; /* in line jump text looks fine*/
-}
+    position:relative;
 
+background-color: #0e0e0e
+
+}
 
 a{
     text-decoration: none;

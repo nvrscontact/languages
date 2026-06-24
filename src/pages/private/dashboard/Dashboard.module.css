@@ -1,6 +1,8 @@
 .hero {
-    margin: 0 30px 120px 30px;
     position:relative;
+    display:flex;
+    justify-content: center;
+    margin-bottom: 120px;
 }
 
 .greeting {
@@ -8,11 +10,13 @@
     font-size: var(--text-2xl);
     font-weight: 700;
     position:relative;
-
+    width:90vw;
+    padding-left: 10px;
+    
     span {
         color: var(--white-8);
     }
-
+    
     p{
         display:flex;
         align-self: start;
@@ -35,7 +39,7 @@
     position: absolute;
     left:0;
     right:0;
-    bottom:-30px;
+    bottom:-40px;
     height:1px;
     background: #333;
 }
@@ -46,7 +50,7 @@
     right:0;
     bottom:-60px;
     width:1px;
-    height:130px;
+    height:150px;
     background:#333;
 }
 
@@ -64,4 +68,3 @@
         font-size:var(--text-sm);
     }
 }
-

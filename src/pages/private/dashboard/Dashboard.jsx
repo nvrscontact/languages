@@ -48,7 +48,7 @@ function Dashboard() {
           {dayMessage}, <br />
           <p>
             <span>Kuznetsova</span>.
-            <span className={dashboard.date}>{hour}:{minutes} Mon</span>
+            <span className={dashboard.date}>{hour}:{minutes} - Mon</span>
           </p>
         </div>
       </section>
