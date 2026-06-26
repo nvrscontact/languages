@@ -1,71 +1,106 @@
-.hero {
-    position:relative;
-    display:flex;
+.heroContainer, .trainingContainer, .languagesContainer, .stadisticsContainer{
+    display: flex;
     justify-content: center;
-    margin-bottom: 120px;
+    position:relative;
 }
+
+.heroContainer::before, .trainingContainer::before, .stadisticsContainer::before {
+    content: "";
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:1px;
+    background: #333;
+}
+
 
 .greeting {
     color: var(--white-4);
     font-size: var(--text-2xl);
     font-weight: 700;
-    position:relative;
-    width:90vw;
-    padding-left: 10px;
-    padding-top: 10px;
-    
+    width: 90vw;
+    border-left: 1px solid var(--white-1);
+    border-right: 1px solid var(--white-1);
+    padding-left: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
     span {
         color: var(--white-8);
     }
-    
-    p{
-        display:flex;
+
+    div {
+        display: flex;
         align-self: start;
     }
+
     .date {
         margin-top: 5px;
         margin-left: 5px;
-        font-size: 10px;
+        font-size: 12px;
         font-weight: 300;
         background-color: var(--white-1);
-        border:1px solid var(--white-2);
+        border: 1px solid var(--white-2);
         height: fit-content;
-        padding:4px 4px;
         border-radius: 5px;
+        display:flex;
+        align-items: center;
+        gap:5px;
     }
-}
 
-.greeting::before{
-    content: "";
-    position: absolute;
-    left:0;
-    right:0;
-    bottom:-40px;
-    height:1px;
-    background: #333;
-}
+    .date {
+        display:flex;
+        align-items: center;
+        background-color: var(--white-1);
+        
+    }
 
-.greeting::after{
-    content:"";
-    position:absolute;
-    right:0;
-    bottom:-60px;
-    width:1px;
-    height:150px;
-    background:#333;
-}
+    .date span:nth-of-type(1){
+        padding:5px 0 5px 5px;
+    }
 
-.training{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 150px;
+    .date span:nth-of-type(2){
+        display:flex;
+        align-items: center;
+        background-color: var(--white-1);
+        padding:5px;
+    }
+
     
-    button{
+    .date span img{
+        width:15px;
+    }
+
+}
+
+.training {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    padding-top: 10px;
+    padding-bottom: 50px;
+
+    .descriptitveMsg{
+        margin-bottom: 50px;
+        opacity:0.4;
+        font-size: var(--text-sm);
+    }
+
+    button {
         margin-top: 30px;
     }
 
-    .header-basic span{
-        font-size:var(--text-sm);
+    .header-basic span {
+        font-size: var(--text-sm);
     }
+}
+
+.stadistics{
+    width:90vw;
+    padding:20px;
+    border-left:1px solid var(--white-2);
+    border-right:1px solid var(--white-2);
 }

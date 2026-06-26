@@ -1,10 +1,11 @@
-.sec {
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.card {
+.article {
+    word-wrap: break-word;
     background-color: rgba(153, 153, 153, 0.1);
     backdrop-filter: blur(2px);
     border-radius: 10px;
@@ -15,43 +16,43 @@
     max-width: 320px;
 }
 
-.topInfoCard{
-    color:var(--white-7);
+.topInfoCard {
+    color: var(--white-7);
     font-weight: 200;
     margin-bottom: 20px;
 }
+
 .bottomInfoCard {
     display: flex;
     justify-content: center;
-    padding:0 30px;
-    gap:15px;
-    width:100%;
+    padding: 0 30px;
+    gap: 15px;
+    width: 100%;
     margin-bottom: 30px;
     font-weight: 200;
-    color:var(--white-5);
-    
-    div{
-        display:flex;
+    color: var(--white-5);
+
+    div {
+        display: flex;
         flex-direction: column;
     }
 
-    img{
-        width:30px;
-        opacity:0.8;
+    img {
+        width: 30px;
+        opacity: 0.8;
     }
 
 }
 
-.advice{
+.advice {
     text-align: center;
-    margin-top:15px;
+    margin-top: 15px;
     margin-bottom: 20px;
-    color:var(--white-5);
+    color: var(--white-5);
     font-weight: 200;
 }
 
-.paragraph {
-    padding: 15px 18px;
+.header {
     margin: 3px;
     background-color: var(--white-1);
     border-top-left-radius: 5px;
@@ -59,78 +60,62 @@
     border-bottom: 1px solid var(--white-2);
     display: flex;
     flex-direction: column;
-    gap: 15px;
 
-    h3 {
+    h2 {
         line-height: 1.5;
         font-weight: 600;
         color: var(--white-5);
+        padding: 15px 18px 25px 18px;
 
         span {
             color: var(--white-8);
-            border-bottom: 1px solid var(--white-3);
         }
-
+        
     }
 
-    p {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 6px;
-        margin-bottom: 6px;
-        background-color: var(--white-1);
-        padding:6px 18px 6px 10px;
-        border-radius: 2px;
-        color: var(--white-5);
-        font-weight: 300;
-
-        b {
-            font-weight: 600;
-            color: var(--white-8);
-        }
-
-        b:nth-of-type(1) {
-            border-bottom: 1px solid var(--white-3);
-        }
-
-
-    }
 
     img {
         width: 10px;
         opacity: 0.5;
     }
 
-    div section {
-        display: grid;
-        align-items: center;
-        justify-content: space-between;
-        grid-template-columns: auto auto;
-        gap:10px;
-    }
-
-
-
-
 }
 
-.paragraph {
+.header .explanation {
+    display: flex;
+    flex-direction: column;
+    padding: 0 18px 20px 18px;
+    gap: 20px;
+    color: var(--white-5);
+    font-weight: 300;
+    overflow-wrap: anywhere;
+    /* Will cut the string when it necessary to avoid loss the complete word*/
 
+    section div {
+        display: flex;
+        max-width: fit-content;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding-bottom: 5px;
+        border-bottom: 1px solid var(--white-3);
 
-    div section:nth-child(even) {
-        img {
-            margin-right: 10px;
+        h3 {
+            flex-wrap: wrap;
+            color: var(--white-8);
+        }
+
+        b {
+            font-weight: 600;
         }
     }
-
 }
 
 
 
 .question {
     color: var(--white-8);
-    margin-bottom: 40px;
+
+    /* rgb(42, 42, 42) */
 
     p {
         background-color: rgb(42, 42, 42);
@@ -150,32 +135,34 @@
     }
 }
 
-.answer__input{
-    border-top:1px solid var(--white-2);
-    display:flex;
+.answer__input {
+    border-top: 1px solid var(--white-2);
+    display: flex;
     justify-content: space-between;
-    gap:10px;
-    
-    span{
-        padding:20px;
+    gap: 10px;
+
+    span {
+        padding: 20px;
         font-size: 14px;
-        color:var(--white-6);
+        color: var(--white-6);
     }
-    div{
-        display:flex;
+
+    div {
+        display: flex;
         align-items: center;
         border-left: 1px solid var(--white-3);
-        padding:0 24px;
+        padding: 0 24px;
     }
-    img{
-        width:25px;
+
+    img {
+        width: 25px;
         height: 25px;
-        opacity:0.7;
+        opacity: 0.7;
     }
 }
 
 
-.third_card, 
+.third_card,
 .fourth_card {
     video {
         height: 300px;
@@ -188,5 +175,3 @@
         margin: 0;
     }
 }
-
-

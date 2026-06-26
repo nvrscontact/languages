@@ -11,8 +11,7 @@ import france_bg from '../../../assets/imgs/france_bg.jpg';
 import profile_one from '../../../assets/imgs/profile_one.jpg';
 import profile_two from '../../../assets/imgs/profile_two.webp';
 import dark_map from '../../../assets/imgs/dark_map.png';
-
-import flower_hero from '../../../assets/imgs/flower_hero.png';
+import snowy from '../../../assets/icons/snowy.svg';
 
 import cards from './Card.module.css';
 import dashboard from './Dashboard.module.css';
@@ -37,31 +36,47 @@ function Dashboard() {
   }
 
   return (
-    <div>
+    <>
 
 
-      <section className={dashboard.hero}>
-        <div className={dashboard.greeting}>
+      <section className={dashboard.heroContainer}>
+        <header className={dashboard.greeting}>
           {dayMessage}, <br />
+          <div>
+            <span>Kuznetosva</span>.
+            <p className={dashboard.date}>
+              <span>{hour}:{minutes}</span>
+              <span><img src={snowy} alt="" /></span> </p>
+          </div>
+        </header>
+      </section>
+
+      <section className={dashboard.trainingContainer}>
+        <div className={dashboard.training}>
+          <p className={dashboard.descriptitveMsg}>If you think it better, every day you have at least 10m free</p>
+
+          <header className={`header-basic`}>
+            <h2>Let's get started</h2>
+            <span>Remember, you're getting <br /> closer every day</span>
+          </header>
+
+          <Link to="/training"><Btn1 text1="Start" img={uk_flag} /></Link>
+        </div>
+      </section>
+
+      <section className={dashboard.stadisticsContainer}>
+        <div className={dashboard.stadistics}>
+
+        <h4>A1 • English - Learning Progress (55%)</h4><br />
+
           <p>
-            <span>Kuznetsova</span>.
-            <span className={dashboard.date}>{hour}:{minutes} - Mon</span>
-          </p>
+            <h3>Real-Life situations <span>4</span> </h3>
+            <span>you are able to speak and write </span>
+            </p>
         </div>
       </section>
 
-
-      <section className={dashboard.training}>
-
-        <div className={`header-basic`}>
-          <h2>Let's get started</h2>
-          <span>Remember, you're getting <br /> closer every day</span>
-        </div>
-
-        <Link to="/training"><Btn1 text1="Start" img={uk_flag} /></Link>
-      </section>
-
-      <section className={cards.languages}>
+      <section className={cards.languagesContainer}>
 
         <div className={`${cards.header} header-basic`}>
           <h2>Available Languages</h2>
@@ -148,8 +163,14 @@ function Dashboard() {
         </div>
       </section>
 
+      
 
-    </div>
+      <footer>
+        <p>© 2020 Brilliant Technologies </p>
+      </footer>
+
+
+    </>
   )
 }
 

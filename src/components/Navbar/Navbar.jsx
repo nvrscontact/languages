@@ -39,7 +39,7 @@ function Navbar() {
 
                     <section className={styles.languageOptions}>
                         <span>A1</span>
-                        <img src={fr_flag} alt="" />
+                        <img src={sp_flag} alt="" />
                     </section>
 
                     <section className={styles.navigationMenu}

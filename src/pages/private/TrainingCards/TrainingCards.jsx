@@ -20,27 +20,34 @@ function TrainingCards() {
     <>
 
       {/* Separarlos en components */}
+
+
       {step === 1 && (
-        <div className={`${card.sec}`} >
+        <div className={`${card.container}`} >
 
 
-
+          {/* 
           <section className={card.topInfoCard}>
             <span>It takes &lt;2 minutes</span>
           </section>
+          */}
 
-          <section className={card.card}>
-            <div className={card.paragraph}>
-              <h3> Hello, how are <span>you</span> feeling tonight? <span>Where</span> is your friend?</h3>
-              <div>
+          <section className={card.article}>
+            <div className={card.header}>
+              <h2> Hello, how are <span>you</span> feeling tonight?, ohh, <span>Where</span> is your friend?</h2>
+              <div className={card.explanation}>
                 <section>
-                  <p><b>You</b> significa <b>tú</b> </p>
-                  <img src={improving} alt="" />
+                  <div>
+                    <h3>You</h3>
+                    <p>significa <b>tú</b></p>
+                  </div>
                 </section>
 
                 <section>
-                  <p><b>Where</b> significa <b>donde</b> </p>
-                  <img src={improving} alt="" />
+                  <div>
+                    <h3>Where</h3>
+                    <p>significa <b>donde</b></p>
+                  </div>
                 </section>
 
               </div>
@@ -48,8 +55,8 @@ function TrainingCards() {
 
 
             <div className={card.question}>
-              <p>¿Que palabra uso para referirme a 'donde' ?</p>
-              <p>¿Que palabra uso para referirme a 'ti' ?</p>
+              <p>¿Que palabra uso para referirme a <b>donde</b> ?</p>
+              <p>¿Que palabra uso para referirme a <b>usted/tu</b> ?</p>
             </div>
 
 
@@ -65,11 +72,6 @@ function TrainingCards() {
 
           </section>
 
-          <section className={card.bottomInfoCard}>
-            <p>Listening</p> •
-            <p>Writing</p> •
-            <p>Reading</p>
-          </section>
 
           <div onClick={() => setStep(2)}>
             <Btn1 text1="Avanzar" text2="siguiente paso" />
